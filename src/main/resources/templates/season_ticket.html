@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <link href="../static/css/schedule.css" rel="stylesheet"
+          th:href="@{css/schedule.css}" media="screen">
+    <title>Schedule</title>
+</head>
+<body>
+<div class="container">
+    <h2>Season tickets</h2>
+    <table>
+        <tr class="darkgrey">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price per day</th>
+        </tr>
+        <tr class="grey" th:each="season_ticket:${allSeasons_tickets}">
+            <td th:text="${season_ticket.season_id}"></td>
+            <td th:text="${season_ticket.season_name}"></td>
+            <td th:text="${season_ticket.price_per_day}"></td>
+        </tr>
+    </table>
+    <h4><a href="/">Home page</a></h4>
+</div>
+</body>
+</html>

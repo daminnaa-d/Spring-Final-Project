@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="utf-8">
+    <link href="../static/css/schedule.css" rel="stylesheet"
+    th:href="@{css/schedule.css}" media="screen" >
+    <title>User list</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>The list of users</h2>
+    <table>
+        <tr class="darkgrey">
+        <th>ID</th>
+        <th>UserName</th>
+        <th>Password</th>
+        </tr>
+        <tr class="grey" th:each="user:${allUsers}">
+            <td th:text="${user.user_id}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+            <td>
+                <form th:action="@{/admin}" method="POST">
+                    <input type="hidden" name="userId" value="${user.user_id}"/>
+                    <input type="hidden" name="action" value="delete"/>
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <h4><a href="/">Home page</a></h4>
+</div>
+</body>
+</html>

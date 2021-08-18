@@ -1,0 +1,37 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding:0;
+    border: 0;
+}
+table{
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+th{
+    background-color: #ffff66;
+    height: 50px;
+    padding: 0 30px;
+}
+
+td{
+    height: 50px;
+    padding: 0 15px;
+}
+
+.grey{
+    background-color: lightgrey;
+}
+
+.darkgrey{
+    background-color: darkgrey;
+}
+
+.container{
+    width: 1080px;
+    margin: 0 auto;
+}
+h2{
+    text-align: center;
+}
